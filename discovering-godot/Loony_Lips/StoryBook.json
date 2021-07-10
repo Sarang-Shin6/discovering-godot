@@ -1,0 +1,10 @@
+[
+    {
+        "prompts" : ["a name", "a movie", "an adjective", "a director", "a number"],
+        "story" : "Once upon a time %s watched %s and thought it was the %s movie made by %s of the past %s decades"
+    },
+    {
+        "prompts" : ["a noun", "a name", "an adjective", "a noun", "a name"],
+        "story" : "There was once was a %s called %s who searches far and wide for the mythical %s %s of %s"
+    }
+]
