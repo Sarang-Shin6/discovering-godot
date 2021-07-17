@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Levels/TemplateLevel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Characters/NPCs/Camera.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Doors/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Doors/LockedDoor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Computer/Computer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Loot/Briefcase.tscn" type="PackedScene" id=7]
 
 [node name="Level1" instance=ExtResource( 1 )]
 
@@ -45,7 +46,10 @@ position = Vector2( -145.192, -67.8823 )
 position = Vector2( 899.44, -343.183 )
 
 [node name="Furniture" parent="Navigation2D" index="2"]
-tile_data = PoolIntArray( -393212, 8, 0, -196614, 5, 0, -1, 1610612740, 0, -65536, 6, 0, -65535, 10, 0, -65524, 9, 0, 65529, 1610612740, 0, 65530, 1610612740, 0, 65531, 1610612740, 0, 65534, -1610612732, 0, 65535, 5, 0, 8, 9, 0, 131065, 1, 0, 131066, 2, 0, 131067, 3, 0, 65544, 7, 0, 196601, 4, 0, 196602, 4, 0, 196603, 4, 0, 262142, 7, 0 )
+tile_data = PoolIntArray( -196614, 5, 0, -1, 1610612740, 0, -65536, 6, 0, -65535, 10, 0, -65523, 1, 0, -65522, 3, 0, 65529, 1610612740, 0, 65530, 1610612740, 0, 65531, 1610612740, 0, 65534, -1610612732, 0, 65535, 5, 0, 14, 4, 0, 131065, 1, 0, 131066, 2, 0, 131067, 3, 0, 196601, 4, 0, 196602, 4, 0, 196603, 4, 0 )
+
+[node name="Briefcase" parent="Loot" index="0" instance=ExtResource( 7 )]
+position = Vector2( -273.618, -148.141 )
 
 [node name="Camera" parent="Cameras" index="0" instance=ExtResource( 2 )]
 position = Vector2( -443.228, -22.1507 )
@@ -86,4 +90,10 @@ lock_group = "1"
 position = Vector2( -353.95, -224.49 )
 rotation = 1.5708
 lock_group = "1"
+
+[node name="Exit" parent="." index="10"]
+margin_left = -183.895
+margin_top = -441.472
+margin_right = 16.105
+margin_bottom = -341.472
 [connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor" method="_on_Computer_combination"]
