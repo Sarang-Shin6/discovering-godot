@@ -13,12 +13,9 @@
 [node name="GUI" type="CanvasLayer"]
 
 [node name="Control" type="Control" parent="."]
-anchor_left = 1.0
-anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1023.48
-margin_top = -600.0
+margin_left = 0.52002
 margin_right = 0.521118
 mouse_filter = 2
 theme = ExtResource( 3 )
@@ -32,9 +29,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -265.0
-margin_top = -100.0
+margin_top = -94.0
 margin_right = -15.0
-margin_bottom = -24.0
+margin_bottom = -15.0
 texture = ExtResource( 2 )
 patch_margin_left = 20
 patch_margin_top = 20
@@ -47,29 +44,28 @@ __meta__ = {
 [node name="CenterContainer" type="CenterContainer" parent="Control/SuspicionContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 9.00002
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/SuspicionContainer/CenterContainer"]
-margin_left = 37.0
-margin_top = 24.0
-margin_right = 221.0
+margin_left = 44.0
+margin_top = 27.0
+margin_right = 205.0
 margin_bottom = 51.0
 mouse_filter = 2
 
 [node name="Label" type="Label" parent="Control/SuspicionContainer/CenterContainer/HBoxContainer"]
-margin_right = 156.0
-margin_bottom = 27.0
+margin_right = 133.0
+margin_bottom = 23.0
 text = "suspicion"
 
 [node name="SuspicionMeter" type="TextureProgress" parent="Control/SuspicionContainer/CenterContainer/HBoxContainer" groups=[
 "SuspicionMeter",
 ]]
-margin_left = 160.0
-margin_right = 184.0
-margin_bottom = 27.0
+margin_left = 137.0
+margin_right = 161.0
+margin_bottom = 24.0
 texture_under = ExtResource( 1 )
 texture_progress = ExtResource( 4 )
 fill_mode = 4
@@ -103,15 +99,15 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Control/DisguiseContainer/VBoxContainer"]
 margin_right = 263.0
-margin_bottom = 27.0
+margin_bottom = 23.0
 text = "Disguises"
 
 [node name="DisguiseCounter" type="ItemList" parent="Control/DisguiseContainer/VBoxContainer" groups=[
 "disguise_display",
 ]]
-margin_top = 31.0
+margin_top = 27.0
 margin_right = 263.0
-margin_bottom = 65.0
+margin_bottom = 61.0
 items = [ "", ExtResource( 6 ), false ]
 auto_height = true
 max_columns = 7
@@ -121,12 +117,12 @@ script = ExtResource( 8 )
 [node name="LootContainer" type="NinePatchRect" parent="Control" groups=[
 "loot",
 ]]
-anchor_right = 1.0
+anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 15.5211
-margin_top = 491.0
-margin_right = -723.479
-margin_bottom = -24.0
+margin_left = 15.0
+margin_top = -91.381
+margin_right = 265.0
+margin_bottom = -15.381
 texture = ExtResource( 7 )
 patch_margin_left = 12
 patch_margin_top = 12
@@ -147,14 +143,14 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Control/LootContainer/VBoxContainer"]
-margin_right = 80.0
-margin_bottom = 27.0
+margin_right = 68.0
+margin_bottom = 23.0
 text = "Loot"
 
 [node name="ItemList" type="ItemList" parent="Control/LootContainer/VBoxContainer"]
-margin_top = 31.0
-margin_right = 80.0
-margin_bottom = 31.0
+margin_top = 27.0
+margin_right = 68.0
+margin_bottom = 27.0
 auto_height = true
 icon_scale = 0.25
 __meta__ = {

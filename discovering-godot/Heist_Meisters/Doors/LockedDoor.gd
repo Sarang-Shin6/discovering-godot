@@ -19,5 +19,6 @@ func _on_Numpad_combination_correct():
 	$CanvasLayer/Numpad.hide()
 	open()
 
-func _on_Computer_combination(numbers, lock_group):
-	$CanvasLayer/Numpad.combination = numbers
+func _on_Computer_combination(numbers, group):
+	if lock_group == group:
+		$CanvasLayer/Numpad.combination = numbers

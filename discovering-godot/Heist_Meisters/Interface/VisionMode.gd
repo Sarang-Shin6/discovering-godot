@@ -16,17 +16,23 @@ func cycle_vision_mode():
 
 func set_vision_and_sound():
 	if color == DARK:
-		color = NIGHT_VISION
-		setAudio(load("res://SFX/nightvision.wav"))
-		get_tree().call_group("lights", "hide")
-		get_tree().call_group("labels", "show")
+		set_night_vision()
 	else:
-		color = DARK
-		setAudio(load("res://SFX/nightvision_off.wav"))
-		get_tree().call_group("lights", "show")
-		get_tree().call_group("labels", "hide")
+		set_dark_mode()
 
-func setAudio(audioStream):
+func set_night_vision():
+	color = NIGHT_VISION
+	set_audio(load("res://SFX/nightvision.wav"))
+	get_tree().call_group("lights", "hide")
+	get_tree().call_group("labels", "show")
+
+func set_dark_mode():
+	color = DARK
+	set_audio(load("res://SFX/nightvision_off.wav"))
+	get_tree().call_group("lights", "show")
+	get_tree().call_group("labels", "hide")
+
+func set_audio(audioStream):
 	$AudioStreamPlayer2D.stream = audioStream
 	$AudioStreamPlayer2D.play()
 

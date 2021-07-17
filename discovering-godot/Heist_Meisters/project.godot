@@ -10,18 +10,18 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
 
 config/name="Heist Meisters"
-run/main_scene="res://Levels/Level1.tscn"
+run/main_scene="res://Levels/Lobby.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 CombinationGenerator="*res://Doors/CombinationGenerator.gd"
+BackgroundMusic="*res://Music/BackgroundMusic.tscn"
 
 [input]
 
